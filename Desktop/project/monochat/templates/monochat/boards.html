@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+
+{% block title %}掲示板{% endblock %}
+
+{% block cont-title %}カテゴリー{% endblock %}
+
+{% block content %}
+    <div class="d-flex">
+        <a href="{% url 'getBoardsCategory' category='programing' %}">プログラミング</a>
+        <a href="{% url 'getBoardsCategory' category='manga' %}">漫画</a>
+        <a href="{% url 'getBoardsCategory' category='design' %}">デザイン</a>
+    </div>
+
+    <div class="d-flex">
+        <a href="{% url 'getBoardsCategory' category='game' %}">ゲーム</a>
+        <a href="{% url 'getBoardsCategory' category='outdoor' %}">アウトドア</a>
+        <a href="{% url 'getBoardsCategory' category='life' %}">生活</a>
+    </div>
+
+    <div class="d-flex">
+        <a href="{% url 'getBoardsCategory' category='fashion' %}">ファッション</a>
+        <a href="{% url 'getBoardsCategory' category='work' %}">仕事</a>
+        <a href="{% url 'getBoardsCategory' category='food' %}">食べ物</a>
+    </div>
+
+    <div>
+        <a href="{% url 'getBoardsCategory' category='other' %}">その他</a>
+    </div>
+
+    <div>
+        <a href="{% url 'homepage' %}">戻る</a>
+    </div>
+{% endblock %}
+

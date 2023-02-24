@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block title %} {{ category }}掲示板 {% endblock %}
+
+{% block cont-title %} {{ category }} {% endblock %}
+
+{% block content %}
+    <a href="{% url 'boards' %}"></a>
+    <form action="" method="post">
+        {% csrf_token %}
+        <textarea name="comment" required placeholder="コメントを投稿してね"></textarea>
+        <input type="submit" value="投稿">
+    </form>
+
+    <div class="fw-bold">投稿一覧</div>
+    {% for item in data %}
+        <div>投稿者：{{ request.session.login_username }}</div>
+        <p>コメント：{{item.statement}}</p>
+    {% endfor %}
+{% endblock %}

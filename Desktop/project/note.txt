@@ -1,0 +1,17 @@
+メモ
+
+db created_at updated_at カラム追加
+
+「環境構築手順」
+python -m pip install -U pip
+pip install django-bootstrap5
+pip install mysqlclient
+pip install channels==3.0.4
+pip install channels-redis==3.3.1
+pip install asgi-redis
+pip install asgiref
+
+
+py manage.py migrate
+py manage.py runserver  ipアドレス:ポート番号
+

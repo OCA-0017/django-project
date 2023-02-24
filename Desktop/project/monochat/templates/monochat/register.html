@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex;background-color: black;padding: 10px;color: white;">
+        <img src="./../../static/monochat/logo.png" alt="LOGO" style="width: 100px; height: 100px; margin-right: 20px;width: 100px; padding: 8px; background-color: white;">
+        <h1>MONO-toppage-</h1>
+    </div>
+    <h1>testpage</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>ユーザー名</p>
+        <input type="text" name="register_username" autocomplete="off" placeholder="メールアドレスを入力してください" required>
+        <p>メールアドレス</p>
+        <input type="email" name="register_email" autocomplete="off" placeholder="メールアドレスを入力してください" required>
+        <p>パスワード</p>
+        <input type="password" name="register_password" placeholder="パスワードを入力してください" required>
+        <p>パスワード(確認用)</p>
+        <input type="password" name="register_re_password" placeholder="パスワードを入力してください" required>
+
+        <input type="submit" value="ログイン">
+    </form>
+    <p>ログインは<a href="./">こちら</a></p>
+</body>
+</html>
